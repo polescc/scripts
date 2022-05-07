@@ -1,1 +1,3 @@
+
+
 loadstring(game:HttpGet("https://pst.klgrth.io/paste/27d23fuzt2bqjx2ctu4336p7/raw"))()
