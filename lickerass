@@ -1150,6 +1150,15 @@ if Player then
 						CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
 						CurrAnim:Play()
 						CurrAnim:AdjustSpeed()
+					elseif Chat == ".around" then
+						if CurrAnim and CurrAnim.IsPlaying then
+							CurrAnim:Stop()
+						end
+						local Anim = Instance.new("Animation")
+						Anim.AnimationId = "http://www.roblox.com/asset/?id=3303391864" 
+						CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
+						CurrAnim:Play()
+						CurrAnim:AdjustSpeed()
 					elseif Chat == ".showdem" then
 						if CurrAnim and CurrAnim.IsPlaying then
 							CurrAnim:Stop()
