@@ -251,6 +251,100 @@ if Player then
 			end
 		end
 	end
+	local function SetupLake()
+		local Player = game.Players.LocalPlayer
+		local XCoordinate = 0
+		local ZCoordinate = 0
+		local PointInTable = getgenv().PointInTable
+
+		local IS_TEST = false
+
+		if IS_TEST then
+			Player.Character.Archivable = true
+		end
+		local TargCF = CFrame.new(-913.225769, -33.3750153, 275.683624, 0.999649763, -3.41235395e-09, 0.0264636707, 4.89323027e-09, 1, -5.58940734e-08, -0.0264636707, 5.60039908e-08, 0.999649763)
+		Player.Character.HumanoidRootPart.CFrame = TargCF
+		for i = 1,10 do
+			if PointInTable == i then
+				local TargCF = CFrame.new(-913.225769, -33.3750153, 275.683624, 0.999649763, -3.41235395e-09, 0.0264636707, 4.89323027e-09, 1, -5.58940734e-08, -0.0264636707, 5.60039908e-08, 0.999649763)
+				local XCoordinate = 0
+				local ZCoordinate = 0
+				ZCoordinate = i*5
+
+				local NewCF = TargCF*CFrame.new(-XCoordinate,0,ZCoordinate)
+				if IS_TEST then
+					local Clone = Player.Character:Clone()
+					Clone.HumanoidRootPart.CFrame = NewCF
+					Clone.Parent = workspace.Players
+				else
+					local Clone = Player.Character
+					Clone.HumanoidRootPart.CFrame = NewCF
+				end
+			end
+		end
+		local Index = 0
+		for i = 11,20 do
+			Index += 1
+			if PointInTable == i then
+				local TargCF = CFrame.new(-913.225769, -33.3750153, 275.683624, 0.999649763, -3.41235395e-09, 0.0264636707, 4.89323027e-09, 1, -5.58940734e-08, -0.0264636707, 5.60039908e-08, 0.999649763)
+				local XCoordinate = 7
+				local ZCoordinate = 0
+				ZCoordinate = Index*5
+
+				local NewCF = TargCF*CFrame.new(-XCoordinate,0,ZCoordinate)
+				if IS_TEST then
+					local Clone = Player.Character:Clone()
+					Clone.HumanoidRootPart.CFrame = NewCF
+					Clone.Parent = workspace.Players
+				else
+					local Clone = Player.Character
+					Clone.HumanoidRootPart.CFrame = NewCF
+				end
+			end
+		end
+
+		local Index = 0
+		for i = 21,30 do
+			Index += 1
+			if PointInTable == i then
+				local TargCF = CFrame.new(-913.225769, -33.3750153, 275.683624, 0.999649763, -3.41235395e-09, 0.0264636707, 4.89323027e-09, 1, -5.58940734e-08, -0.0264636707, 5.60039908e-08, 0.999649763)
+				local XCoordinate = 14
+				local ZCoordinate = 0
+				ZCoordinate = Index*5
+
+				local NewCF = TargCF*CFrame.new(-XCoordinate,0,ZCoordinate)
+				if IS_TEST then
+					local Clone = Player.Character:Clone()
+					Clone.HumanoidRootPart.CFrame = NewCF
+					Clone.Parent = workspace.Players
+				else
+					local Clone = Player.Character
+					Clone.HumanoidRootPart.CFrame = NewCF
+				end
+			end
+		end
+
+		local Index = 0
+		for i = 31,40 do
+			Index += 1
+			if PointInTable == i then
+				local TargCF = CFrame.new(-913.225769, -33.3750153, 275.683624, 0.999649763, -3.41235395e-09, 0.0264636707, 4.89323027e-09, 1, -5.58940734e-08, -0.0264636707, 5.60039908e-08, 0.999649763)
+				local XCoordinate = 21
+				local ZCoordinate = 0
+				ZCoordinate = Index*5
+
+				local NewCF = TargCF*CFrame.new(-XCoordinate,0,ZCoordinate)
+				if IS_TEST then
+					local Clone = Player.Character:Clone()
+					Clone.HumanoidRootPart.CFrame = NewCF
+					Clone.Parent = workspace.Players
+				else
+					local Clone = Player.Character
+					Clone.HumanoidRootPart.CFrame = NewCF
+				end
+			end
+		end
+	end
 	local function SetUpClub()
 		local Player = game.Players.LocalPlayer
 		local XCoordinate = 0
@@ -959,6 +1053,9 @@ if Player then
 					if Chat == ".bring host bank" then
 
 						BringPlr(Player.Name,CFrame.new(-396.988922, 21.7570763, -293.929779, -0.102468058, -1.9584887e-09, -0.994736314, 7.23731564e-09, 1, -2.71436984e-09, 0.994736314, -7.47735651e-09, -0.102468058))
+					if Chat == ".bring host lake" then
+
+						BringPlr(Player.Name,CFrame.new(-897.144958, -33.3750153, 363.247009, -0.944559216, -7.72915314e-08, -0.328341067, -5.95481993e-08, 1, -6.40941238e-08, 0.328341067, -4.09885779e-08, -0.944559216))
 					elseif Chat == ".bring host admin" then
 
 						BringPlr(Player.Name,CFrame.new(-872.453674, -32.6421318, -532.476379, 0.999682248, -1.36019978e-08, 0.0252073351, 1.33811247e-08, 1, 8.93094043e-09, -0.0252073351, -8.59080007e-09, 0.999682248))
@@ -1101,6 +1198,9 @@ if Player then
 					elseif Chat == ".setup bank" then
 						Aura = false
 						SetUpBank()  
+					elseif Chat == ".setup lake" then
+						Aura = false
+						SetUpLake() 
 					elseif Chat:match(".fps all") then
 						local Text = string.gsub(Chat, "%D", "")
 						if Text then
