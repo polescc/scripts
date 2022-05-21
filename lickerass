@@ -1487,6 +1487,8 @@ if Player then
 
 					elseif Chat == ".stop aura" then
 						Aura=  false
+					elseif Chat == ".reset" then
+                				game.Players.LocalPlayer.Character.Humanoid.Health = 0
 					elseif Chat == ".setup train" then
 						Aura = false
 						SetupTrain()
