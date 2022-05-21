@@ -1150,21 +1150,30 @@ if Player then
 						CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
 						CurrAnim:Play()
 						CurrAnim:AdjustSpeed()
-					elseif Chat == ".around" then
-						if CurrAnim and CurrAnim.IsPlaying then
-							CurrAnim:Stop()
-						end
-						local Anim = Instance.new("Animation")
-						Anim.AnimationId = "http://www.roblox.com/asset/?id=3303391864" 
-						CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
-						CurrAnim:Play()
-						CurrAnim:AdjustSpeed()
 					elseif Chat == ".showdem" then
 						if CurrAnim and CurrAnim.IsPlaying then
 							CurrAnim:Stop()
 						end
 						local Anim = Instance.new("Animation")
 						Anim.AnimationId = "http://www.roblox.com/asset/?id=7198989668"
+						CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
+						CurrAnim:Play()
+						CurrAnim:AdjustSpeed()
+					elseif Chat == ".flyanim" then
+						if CurrAnim and CurrAnim.IsPlaying then
+							CurrAnim:Stop()
+						end
+						local Anim = Instance.new("Animation")
+						Anim.AnimationId = "http://www.roblox.com/asset/?id=3541044388"
+						CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
+						CurrAnim:Play()
+						CurrAnim:AdjustSpeed()
+					elseif Chat == ".flyhover" then
+						if CurrAnim and CurrAnim.IsPlaying then
+							CurrAnim:Stop()
+						end
+						local Anim = Instance.new("Animation")
+						Anim.AnimationId = "http://www.roblox.com/asset/?id=3541114300"
 						CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
 						CurrAnim:Play()
 						CurrAnim:AdjustSpeed()
@@ -1482,7 +1491,7 @@ if Player then
 						Aura = false
 						SetupTrain()
 						
-					end
+					end		
 				end
 
 			end
