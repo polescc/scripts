@@ -1053,7 +1053,7 @@ if Player then
 					if Chat == ".bring host bank" then
 
 						BringPlr(Player.Name,CFrame.new(-396.988922, 21.7570763, -293.929779, -0.102468058, -1.9584887e-09, -0.994736314, 7.23731564e-09, 1, -2.71436984e-09, 0.994736314, -7.47735651e-09, -0.102468058))
-					if Chat == ".bring host lake" then
+					elseif Chat == ".bring host lake" then
 
 						BringPlr(Player.Name,CFrame.new(-897.144958, -33.3750153, 363.247009, -0.944559216, -7.72915314e-08, -0.328341067, -5.95481993e-08, 1, -6.40941238e-08, 0.328341067, -4.09885779e-08, -0.944559216))
 					elseif Chat == ".bring host admin" then
